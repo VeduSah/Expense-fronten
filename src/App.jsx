@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AddExpense from './components/AddExpense';
 import ExpenseList from './components/ExpenseList';
 import './App.css'
-
+console.log(import.meta.env.VITE_BAKEND_BASE_URL)
 const App= ()=> {
   const [expenses,setExpenses]=useState([]);
   useEffect(()=>{
