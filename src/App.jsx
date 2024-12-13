@@ -8,8 +8,9 @@ const App= ()=> {
   useEffect(()=>{
  getExpense();
   },[])
+  const url=`${import.meta.env.VITE_BAKEND_BASE_URL}/api/expenses`;
  const getExpense=()=>{
-  fetch(`${import.meta.env.VITE_BAKEND_BASE_URL}/api/expenses`)
+ fetch(url)
   .then((response)=>{ 
     if(!response.ok){
     throw new Error('Network response is not Ok')
